@@ -1,0 +1,242 @@
+* { box-sizing: border-box; }
+body {
+  font: 16px Arial;
+}
+
+form {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    border: 1px solid transparent;
+    background-color: #ccc;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 1.5em;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+/* input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+} */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3em;
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.label-input input {
+    width: 300px;
+    height: 40px;
+}
+.templateId{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+input, select {
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: .5em;
+}
+
+input[type=number] {
+    width: 125px;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 2em;
+  border: 1px solid transparent;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+.counter {
+    
+    margin-bottom: 2em;
+}
+
+.addRow, .removeRow{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-right: .5em;
+    padding: 1em;
+    
+}
+
+.addRow {
+    background-color: orangered;
+    cursor: pointer;
+    color: white;
+}
+
+.removeRow {
+    background-color: white;
+}
+
+.removeRow:hover{
+   background-color: #ff9980;
+   cursor: pointer;
+   color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th {
+    padding: .2em;
+}
+table {
+    table-layout:fixed;
+    width:100%;
+    margin-bottom: 3em;
+}
+
+#configurationsTable input {
+    width: 115px;
+    margin: 5px;
+    width: 90%;
+    border: 1px solid transparent;
+    
+}
+
+.file {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    
+}
+
+.format {
+    list-style-type: none;
+    border: 1px solid black;
+    width: 300px;
+    border-radius: 10px;
+    padding: 0;
+    background-color: white;
+}
+
+
+.file:hover{
+    background-color: aquamarine;
+}
+
+#ul-id {
+    display: none;
+}
+
